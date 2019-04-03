@@ -10,9 +10,14 @@ struct Variants: Decodable {
     var selectedId: Int
     var variants: [Variant]
     
+    private enum CodingKeys: String, CodingKey {
+        case selectedId
+        case variants
+    }
+    
     init(from decoder: Decoder) throws {
-        var container = try decoder.unkeyedContainer()
-        self.selectedId = try container.decode(Int.self)
-        self.variants = try container.decode([Variant].self)
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.selectedId = try container.decode(Int.self, forKey: .selectedId)
+        self.variants = try container.decode([Variant].self, forKey: .variants)
     }
 }
