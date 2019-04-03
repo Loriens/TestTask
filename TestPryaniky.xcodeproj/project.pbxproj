@@ -13,6 +13,7 @@
 		049DE9AD22554D13008A780B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 049DE9AC22554D13008A780B /* Assets.xcassets */; };
 		049DE9B022554D13008A780B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 049DE9AE22554D13008A780B /* LaunchScreen.storyboard */; };
 		049DE9B822554F2C008A780B /* TextData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049DE9B722554F2C008A780B /* TextData.swift */; };
+		049DE9BA22554F7A008A780B /* ImageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049DE9B922554F7A008A780B /* ImageData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		049DE9AF22554D13008A780B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		049DE9B122554D13008A780B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		049DE9B722554F2C008A780B /* TextData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextData.swift; sourceTree = "<group>"; };
+		049DE9B922554F7A008A780B /* ImageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				049DE9A522554D12008A780B /* AppDelegate.swift */,
 				049DE9A722554D12008A780B /* ViewController.swift */,
 				049DE9B722554F2C008A780B /* TextData.swift */,
+				049DE9B922554F7A008A780B /* ImageData.swift */,
 				049DE9A922554D12008A780B /* Main.storyboard */,
 				049DE9AC22554D13008A780B /* Assets.xcassets */,
 				049DE9AE22554D13008A780B /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				049DE9A822554D12008A780B /* ViewController.swift in Sources */,
 				049DE9A622554D12008A780B /* AppDelegate.swift in Sources */,
 				049DE9B822554F2C008A780B /* TextData.swift in Sources */,
+				049DE9BA22554F7A008A780B /* ImageData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
