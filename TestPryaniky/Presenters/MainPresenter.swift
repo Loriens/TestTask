@@ -9,7 +9,10 @@
 import Foundation
 
 protocol MainViewDelegate: NSObjectProtocol {
-    
+    func createAlert(title: String)
+    func createAlert(title: String, text: String)
+    func selectVariants()
+    func hideVariants()
 }
 
 class MainPresenter {
@@ -47,6 +50,21 @@ class MainPresenter {
     
     func getItemData(with name: String) -> Any? {
         return allItemData[name]
+    }
+    
+    func didSelectVariant(elem: Int) {
+        var selector = allItemData[TypesData.selector.rawValue] as! VariantsData
+        selector.selectedId = elem
+        mainViewDelegate?.hideVariants()
+        mainViewDelegate?.createAlert(title: TypesData.selector.rawValue, text: "You selected \(selector.variants[elem].text)")
+    }
+    
+    func didSelectCell(with name: String, elem: Int = 0) {
+        if name == TypesData.selector.rawValue {
+            mainViewDelegate?.selectVariants()
+        } else {
+            mainViewDelegate?.createAlert(title: name)
+        }
     }
     
 }
