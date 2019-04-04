@@ -55,6 +55,7 @@ class MainPresenter {
     func didSelectVariant(elem: Int) {
         var selector = allItemData[TypesData.selector.rawValue] as! VariantsData
         selector.selectedId = elem
+        allItemData[TypesData.selector.rawValue] = selector
         mainViewDelegate?.hideVariants()
         mainViewDelegate?.createAlert(title: TypesData.selector.rawValue, text: "You selected \(selector.variants[elem].text)")
     }
