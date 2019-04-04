@@ -16,11 +16,21 @@ class MainPresenter {
     
     private let serverService: ServerRequestService
     private var viewData: ViewData?
+    private var allItemData: [String: Any] = [String: Any]()
     weak private var mainViewDelegate: MainViewDelegate?
     
     init(serverService: ServerRequestService) {
         self.serverService = serverService
-        self.viewData = serverService.getData()
+        
+        guard let data = serverService.getData() else {
+            return
+        }
+        self.viewData = data
+        self.allItemData = [String: Any]()
+        
+        viewData!.data.forEach({ elem in
+            self.allItemData[elem.name] = elem.data
+        })
     }
     
     func setViewDelegate(mainViewDelegate: MainViewDelegate) {
@@ -33,6 +43,10 @@ class MainPresenter {
         }
         
         return data.view
+    }
+    
+    func getItemData(with name: String) -> Any? {
+        return allItemData[name]
     }
     
 }
