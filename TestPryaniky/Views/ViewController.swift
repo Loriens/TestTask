@@ -8,12 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainViewController: UITableViewController, MainViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print(ServerRequestService().getData())
     }
 
 

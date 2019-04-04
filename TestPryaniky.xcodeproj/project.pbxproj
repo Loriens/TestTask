@@ -19,6 +19,7 @@
 		049DE9C5225556B2008A780B /* ServerRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049DE9C4225556B2008A780B /* ServerRequestService.swift */; };
 		049DE9C72255E8CF008A780B /* ViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049DE9C62255E8CF008A780B /* ViewData.swift */; };
 		049DE9C92255E911008A780B /* ViewElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049DE9C82255E911008A780B /* ViewElement.swift */; };
+		049DE9CB2255FEF7008A780B /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049DE9CA2255FEF7008A780B /* MainPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		049DE9C4225556B2008A780B /* ServerRequestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerRequestService.swift; sourceTree = "<group>"; };
 		049DE9C62255E8CF008A780B /* ViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewData.swift; sourceTree = "<group>"; };
 		049DE9C82255E911008A780B /* ViewElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewElement.swift; sourceTree = "<group>"; };
+		049DE9CA2255FEF7008A780B /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 		049DE9C222555669008A780B /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				049DE9CA2255FEF7008A780B /* MainPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				049DE9A622554D12008A780B /* AppDelegate.swift in Sources */,
 				049DE9C5225556B2008A780B /* ServerRequestService.swift in Sources */,
 				049DE9B822554F2C008A780B /* TextData.swift in Sources */,
+				049DE9CB2255FEF7008A780B /* MainPresenter.swift in Sources */,
 				049DE9BA22554F7A008A780B /* ImageData.swift in Sources */,
 				049DE9BC22555164008A780B /* VariantData.swift in Sources */,
 				049DE9C72255E8CF008A780B /* ViewData.swift in Sources */,
