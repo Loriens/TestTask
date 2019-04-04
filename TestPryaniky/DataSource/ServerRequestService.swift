@@ -12,10 +12,18 @@ class ServerRequestService {
     
     private var defaultURL = "https://prnk.blob.core.windows.net/tmp/JSONSample.json"
     
-    func getData(from url: String? = nil) -> ViewData? {
+    func getData(from tempURL: String? = nil) -> ViewData? {
         var result: ViewData?
         
-        guard let url = URL(string: defaultURL) else {
+        var stringURL: String
+        
+        if let temp = tempURL {
+            stringURL = temp
+        } else {
+            stringURL = defaultURL
+        }
+        
+        guard let url = URL(string: stringURL) else {
             print("Url is not found")
             return result
         }
