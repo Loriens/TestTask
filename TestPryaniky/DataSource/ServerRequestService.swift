@@ -51,6 +51,7 @@ class ServerRequestService {
             if let tempViewData = try? decoder.decode(ViewData.self, from: data) {
                 result = tempViewData
             }
+            requestGroup.leave()
         }
         
         dataTask.resume()

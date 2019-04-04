@@ -21,11 +21,11 @@ struct ViewElement: Decodable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.name = try container.decode(String.self, forKey: .name)
         switch self.name {
-        case "hz":
+        case TypesData.hz.rawValue:
             self.data = try container.decode(TextData.self, forKey: .data)
-        case "picture":
+        case TypesData.picture.rawValue:
             self.data = try container.decode(ImageData.self, forKey: .data)
-        case "selector":
+        case TypesData.selector.rawValue:
             self.data = try container.decode(VariantsData.self, forKey: .data)
         default:
             self.data = nil
