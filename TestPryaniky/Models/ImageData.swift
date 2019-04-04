@@ -8,5 +8,5 @@
 
 struct ImageData: Codable {
     var text: String
-    var imageURL: String
+    var url: String
 }

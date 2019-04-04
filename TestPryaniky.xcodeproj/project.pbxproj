@@ -17,6 +17,8 @@
 		049DE9BC22555164008A780B /* VariantData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049DE9BB22555164008A780B /* VariantData.swift */; };
 		049DE9BE22555171008A780B /* VariantsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049DE9BD22555171008A780B /* VariantsData.swift */; };
 		049DE9C5225556B2008A780B /* ServerRequestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049DE9C4225556B2008A780B /* ServerRequestService.swift */; };
+		049DE9C72255E8CF008A780B /* ViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049DE9C62255E8CF008A780B /* ViewData.swift */; };
+		049DE9C92255E911008A780B /* ViewElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049DE9C82255E911008A780B /* ViewElement.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		049DE9BB22555164008A780B /* VariantData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariantData.swift; sourceTree = "<group>"; };
 		049DE9BD22555171008A780B /* VariantsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariantsData.swift; sourceTree = "<group>"; };
 		049DE9C4225556B2008A780B /* ServerRequestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerRequestService.swift; sourceTree = "<group>"; };
+		049DE9C62255E8CF008A780B /* ViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewData.swift; sourceTree = "<group>"; };
+		049DE9C82255E911008A780B /* ViewElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewElement.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,8 @@
 				049DE9B922554F7A008A780B /* ImageData.swift */,
 				049DE9BB22555164008A780B /* VariantData.swift */,
 				049DE9BD22555171008A780B /* VariantsData.swift */,
+				049DE9C62255E8CF008A780B /* ViewData.swift */,
+				049DE9C82255E911008A780B /* ViewElement.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -183,11 +189,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				049DE9A822554D12008A780B /* ViewController.swift in Sources */,
+				049DE9C92255E911008A780B /* ViewElement.swift in Sources */,
 				049DE9A622554D12008A780B /* AppDelegate.swift in Sources */,
 				049DE9C5225556B2008A780B /* ServerRequestService.swift in Sources */,
 				049DE9B822554F2C008A780B /* TextData.swift in Sources */,
 				049DE9BA22554F7A008A780B /* ImageData.swift in Sources */,
 				049DE9BC22555164008A780B /* VariantData.swift in Sources */,
+				049DE9C72255E8CF008A780B /* ViewData.swift in Sources */,
 				049DE9BE22555171008A780B /* VariantsData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -6,7 +6,7 @@
 //  Copyright © 2019 Vladislav Markov. All rights reserved.
 //
 
-struct Variant: Codable {
+struct VariantData: Codable {
     var id: Int
     var text: String
 }

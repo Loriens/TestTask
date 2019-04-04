@@ -6,9 +6,9 @@
 //  Copyright © 2019 Vladislav Markov. All rights reserved.
 //
 
-struct Variants: Decodable {
+struct VariantsData: Decodable {
     var selectedId: Int
-    var variants: [Variant]
+    var variants: [VariantData]
     
     private enum CodingKeys: String, CodingKey {
         case selectedId
@@ -18,6 +18,6 @@ struct Variants: Decodable {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.selectedId = try container.decode(Int.self, forKey: .selectedId)
-        self.variants = try container.decode([Variant].self, forKey: .variants)
+        self.variants = try container.decode([VariantData].self, forKey: .variants)
     }
 }

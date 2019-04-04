@@ -12,10 +12,12 @@ class ServerRequestService {
     
     private var defaultURL = "https://prnk.blob.core.windows.net/tmp/JSONSample.json"
     
-    func getData(from url: String? = nil) {
+    func getData(from url: String? = nil) -> ViewData? {
+        var result: ViewData?
+        
         guard let url = URL(string: defaultURL) else {
             print("Url is not found")
-            return
+            return result
         }
         
         let defaultHeaders = [
@@ -23,7 +25,6 @@ class ServerRequestService {
         ]
         var request = URLRequest(url: url)
         request.allHTTPHeaderFields = defaultHeaders
-        request.httpMethod = "POST"
         
         let requestGroup = DispatchGroup()
         requestGroup.enter()
@@ -35,18 +36,27 @@ class ServerRequestService {
             }
             
             if let httpResponse = response as? HTTPURLResponse {
-                print("http response: \(httpResponse)")
+                if httpResponse.statusCode != 200 {
+                    print("Http response code: \(httpResponse.statusCode)")
+                }
             }
             
             guard let data = data else {
-                print("no data received")
+                print("No data received")
                 requestGroup.leave()
                 return
+            }
+            
+            let decoder = JSONDecoder()
+            if let tempViewData = try? decoder.decode(ViewData.self, from: data) {
+                result = tempViewData
             }
         }
         
         dataTask.resume()
         requestGroup.wait()
+        
+        return result
     }
     
 }
